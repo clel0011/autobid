@@ -22,12 +22,14 @@ def autoBid(incomingBids, hand, score):
         #they bid your preferred suit
 
     #must rank highly due to convention for certain bids:
-        #partner double first round and defense passes => you must bid your 'strongest' suit
+        #partner doubles
+            #first round and defense passes => you must bid your 'strongest' suit
+            #not first round then pass
+            
         #if partner bids 2 clubs then respond with point count in 3 point increments, then respond again with 'strongest' suit 
         #if partner 'asks for aces'
         #if partner bids 1NT opening round must respond with 'strongest' suit
         #if partner bids 'weak bid' then decide which bid is best pass, game in partner's suit or 3NT
-        #if 
 
     #analyze they's bids
 
