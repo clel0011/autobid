@@ -13,6 +13,7 @@ hand = [0, 1, 5, 7, 11, 13, 18, 19, 29, 30, 32, 40, 51]
 
 def autoBid(incomingBids, hand, score):
     #get partners bids
+    partnersBids = getPartnersBids(incomingBids)
 
     #get total hand point count based on partners bids and hand
     
@@ -37,17 +38,12 @@ def autoBid(incomingBids, hand, score):
 
     # for cardAsNumber in hand:
     #     suit = getSuitFromCardAsNumber(somethingElse)
-    #     print(suit)
+    #     print(sui
 
 
-
-
-
-
-    outgoingBid = -1
+    outgoingBid = None
     return outgoingBid
 
-    print(autoBid(1, 2))
 
 
 
@@ -64,3 +60,22 @@ def getSuitFromCardAsNumber(cardAsNumber):
         return 'spade'
     else: 
         return None
+
+def getPartnersBids(incomingBids):
+    #input: all the bids made
+    #return an array of bid names representing the bids your partner has made up to now.  the first index is the most recent bid and the last index is the first bid
+    bids = []
+    i = 1
+    for bid in reversed(incomingBids):
+        if i % 2 == 0 and i % 4 != 0:
+            # print(bid)
+            bids.append(bid[1])
+        i+=1
+    print(bids)
+    return bids
+
+
+
+
+print(autoBid(bids, 2, 0))
+

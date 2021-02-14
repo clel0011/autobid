@@ -1,12 +1,12 @@
 
 import unittest
 
-class TestSuiteName(unittest.TestCase):
-    def setUp(self):
-        # print(1) 
-        pass
-    def tearDown(self):
-        pass
+#this is the name of the function
+class NameOfFunctionBeingTested(unittest.TestCase):
+    
+    #this is how you name a test case (must start with 'test_')
+    def test_caseName(self):
+        self.assertTrue(True)
 
     def test_sumSuccess(self):
         #do some things to get the actual
