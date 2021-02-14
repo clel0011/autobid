@@ -1,0 +1,20 @@
+import unittest
+import autobid
+
+class getSuitFromCardAsNumber(unittest.TestCase):
+    def test_clubLow(self):
+        self.assertEqual(autobid.getSuitFromCardAsNumber(0), 'club')
+    def test_clubHigh(self):
+        self.assertEqual(autobid.getSuitFromCardAsNumber(12), 'club')
+    def test_diamondLow(self):
+        self.assertEqual(autobid.getSuitFromCardAsNumber(13), 'diamond')
+    def test_diamondHigh(self):
+        self.assertEqual(autobid.getSuitFromCardAsNumber(25), 'diamond')
+    def test_heartLow(self):
+        self.assertEqual(autobid.getSuitFromCardAsNumber(26), 'heart')
+    def test_heartHigh(self):
+        self.assertEqual(autobid.getSuitFromCardAsNumber(38), 'heart')
+    def test_spadeLow(self):
+        self.assertEqual(autobid.getSuitFromCardAsNumber(39), 'spade')
+    def test_spadeHigh(self):
+        self.assertEqual(autobid.getSuitFromCardAsNumber(51), 'spade')

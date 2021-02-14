@@ -25,7 +25,7 @@ def autoBid(incomingBids, hand, score):
         #partner doubles
             #first round and defense passes => you must bid your 'strongest' suit
             #not first round then pass
-            
+
         #if partner bids 2 clubs then respond with point count in 3 point increments, then respond again with 'strongest' suit 
         #if partner 'asks for aces'
         #if partner bids 1NT opening round must respond with 'strongest' suit
@@ -54,4 +54,13 @@ def autoBid(incomingBids, hand, score):
 def getSuitFromCardAsNumber(cardAsNumber):
     #input: integer 0 - 51
     #return a suit ('club', 'diamond', 'heart' or 'spade')
-    return cardAsString
+    if cardAsNumber >= 0 and cardAsNumber <= 12:
+        return 'club'
+    elif cardAsNumber >= 13 and cardAsNumber <= 25:
+        return 'diamond'
+    elif cardAsNumber >= 26 and cardAsNumber <= 38:
+        return 'heart'
+    elif cardAsNumber >= 39 and cardAsNumber <= 51:
+        return 'spade'
+    else: 
+        return None
